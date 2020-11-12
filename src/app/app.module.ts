@@ -1,25 +1,32 @@
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        DashboardComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MatToolbarModule,
+        AppRoutingModule,
+        MatCardModule,
+        MatIconModule,
         MatMenuModule,
         MatButtonModule,
-        MatProgressBarModule,
-        AppRoutingModule
+        MatToolbarModule,
+        MatGridListModule
     ],
     providers: [],
     bootstrap: [AppComponent]
